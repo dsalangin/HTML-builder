@@ -8,3 +8,7 @@ const readableStream = fs.createReadStream(pathFile);
 readableStream.on('data', (chunk) => {
   console.log(chunk.toString());
 });
+
+readableStream.on('error', (error) => {
+  console.log(error.message);
+});
